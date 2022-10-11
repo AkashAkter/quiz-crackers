@@ -1,0 +1,21 @@
+nav {
+    background-color: #c8d6ca;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a {
+    color: #1a2d37;
+    text-decoration: none;
+    padding: 30px;
+}
+
+.main-name {
+    font-size: larger;
+    font-weight: 800;
+}
+
+nav a:hover {
+    color: #001a29;
+}
