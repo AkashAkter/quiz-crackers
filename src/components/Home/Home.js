@@ -9,7 +9,7 @@ const Home = () => {
     const topics = useLoaderData();
 
     const startQuiz = () => {
-        console.log('Clicked');
+        console.log(topics.data);
 
     }
 

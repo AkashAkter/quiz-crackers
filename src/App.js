@@ -2,9 +2,11 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Blogs from './components/Blogs/Blogs';
-import Footer from './components/Footer/Footer';
+
 import Home from './components/Home/Home';
 import OnlyTopics from './components/OnlyTopics/OnlyTopics';
+import Quiz from './components/Quiz/Quiz';
+import WrongRoute from './components/WrongRoute/WrongRoute';
 import Main from './layout/Main';
 
 function App() {
@@ -15,12 +17,23 @@ function App() {
       children: [
         {
           path: '/',
-          loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
+          loader: async () => {
+            return fetch('https://openapi.programming-hero.com/api/quiz');
+          },
           element: <Home></Home>
         },
         {
+          path: '/:id',
+          loader: async ({ params }) => {
+            console.log(params)
+          },
+          element: <Quiz></Quiz>
+        },
+        {
           path: '/topics',
-          loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
+          loader: async () => {
+            return fetch('https://openapi.programming-hero.com/api/quiz');
+          },
           element: <OnlyTopics></OnlyTopics>
         },
         {
@@ -32,13 +45,17 @@ function App() {
           element: <Blogs></Blogs>
         }
       ]
+    },
+    {
+      path: '*',
+      element: <WrongRoute></WrongRoute>
     }
   ])
 
   return (
     <div className="App">
       <RouterProvider router={router}></RouterProvider>
-      <Footer></Footer>
+
 
     </div>
   );
