@@ -4,3 +4,7 @@
     text-align: start;
     margin: 5px 0;
 }
+
+.option-button:hover {
+    font-weight: 600;
+}

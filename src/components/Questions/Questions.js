@@ -7,8 +7,10 @@ import './Questions.css';
 const Questions = ({ quiz }) => {
     const { question, correctAnswer } = quiz;
     const seeAnswer = () => {
-        alert(correctAnswer);
+        alert("Correct Answer: " + correctAnswer);
     }
+
+
     return (
         <div className='question-section'>
             <div className='question-answer'>
@@ -25,6 +27,8 @@ const Questions = ({ quiz }) => {
                     quiz.options.map(option => <Option
                         key={option}
                         option={option}
+                        correctAnswer={correctAnswer}
+
                     ></Option>)
                 }
 

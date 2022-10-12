@@ -5,7 +5,6 @@ import './Quiz.css'
 
 const Quiz = () => {
     const quizzes = useLoaderData();
-    console.log(quizzes);
 
     return (
         <div>
@@ -19,7 +18,6 @@ const Quiz = () => {
                     )
                 }
             </div>
-
         </div>
     );
 };

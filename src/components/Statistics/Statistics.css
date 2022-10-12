@@ -1,0 +1,8 @@
+.chart-container {
+    background-color: rgb(218, 230, 230);
+    margin: 50px;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    border-radius: 50px;
+}
