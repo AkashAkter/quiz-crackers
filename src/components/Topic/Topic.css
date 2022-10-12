@@ -23,16 +23,19 @@
 }
 
 .details-container button {
-    border: none;
-}
-
-.details-container a {
     padding: 5px 10px;
     background-color: #112830;
     color: white;
 }
 
-.details-container a:hover {
+.details-container a {
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: #112830;
+    color: white;
+}
+
+.details-container button:hover {
     background-color: #203035;
     font-weight: 700;
 

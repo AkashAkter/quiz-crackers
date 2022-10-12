@@ -1,25 +1,19 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
-import Topic from '../Topic/Topic';
+import List from '../List/List';
 
 const OnlyTopics = () => {
     const topics = useLoaderData();
 
-    const startQuiz = () => {
-        console.log('Clicked');
-
-    }
-
     return (
         <div>
-            <h1 className='header'>Select Your Quiz Topic</h1>
+            <h1 className='header'>Quiz Topic List</h1>
             <div className='topics-container'>
                 {
-                    topics.data.map(topic => <Topic
+                    topics.data.map(topic => <List
                         key={topic.id}
                         topic={topic}
-                        startQuiz={startQuiz}
-                    ></Topic>)
+                    ></List>)
                 }
             </div>
         </div>
