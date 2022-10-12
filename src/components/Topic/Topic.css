@@ -36,7 +36,26 @@
 }
 
 .details-container button:hover {
-    background-color: #203035;
-    font-weight: 700;
 
+    font-weight: 700;
+}
+
+
+@media screen and (max-width: 767px) {
+    .topic-container {
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+    .topic-container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .details-container {
+        text-align: center;
+    }
 }

@@ -5,27 +5,29 @@ import Option from '../Option/Option';
 import './Questions.css';
 
 const Questions = ({ quiz }) => {
-    const { question } = quiz;
+    const { question, correctAnswer } = quiz;
     const seeAnswer = () => {
-        console.log(quiz.correctAnswer)
+        alert(correctAnswer);
     }
     return (
         <div className='question-section'>
             <div className='question-answer'>
-                <div className=''>
-                    <h3 className='question'>Question: {question}</h3>
+                <div>
+                    <h3 className='question'>Q: {question}</h3>
                 </div>
                 <div>
                     <button onClick={seeAnswer}><FontAwesomeIcon icon={faEye} ></FontAwesomeIcon></button>
                 </div>
             </div>
-            <div>
+            <div className='options'>
+
                 {
                     quiz.options.map(option => <Option
-                        key={quiz.id}
+                        key={option}
                         option={option}
                     ></Option>)
                 }
+
             </div>
 
         </div>
