@@ -7,6 +7,7 @@
 4. In every click on option it will show is it correct or wrong through alert box.
 5. Then there is in topic route where i've just showed topic list. user can't start the quiz on that route by the way.
 6. In statistics section there a chart of number of quiz in each topic.
+7. And in blog section therer are some question and answer.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
