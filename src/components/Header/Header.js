@@ -11,7 +11,7 @@ const Header = () => {
         <nav>
 
             <div>
-                <Link to='/' className='main-name'>Take Quiz</Link>
+                <Link to='/' className='main-name'>Queezy</Link>
             </div>
 
             <div onClick={() => setOpen(!open)} className='bar-icon'>

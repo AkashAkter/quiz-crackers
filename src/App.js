@@ -1,6 +1,5 @@
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { ToastContainer } from 'react-toastify';
 import './App.css';
 import Blogs from './components/Blogs/Blogs';
 
@@ -60,8 +59,6 @@ function App() {
   return (
     <div className="App">
       <RouterProvider router={router}></RouterProvider>
-
-
     </div>
   );
 }
