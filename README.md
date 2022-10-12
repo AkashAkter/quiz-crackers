@@ -9,3 +9,4 @@
 6. In statistics section there a chart of number of quiz in each topic.
 7. And in blog section therer are some question and answer.
 
+To see the Live Site, check out the link [Queezy Website](https://shiny-mandazi-c3158b.netlify.app/).
