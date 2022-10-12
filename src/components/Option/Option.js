@@ -1,14 +1,15 @@
 import React from 'react';
-import './Option.css'
+import './Option.css';
+import { toast } from 'react-toastify';
 
 const Option = ({ option, correctAnswer }) => {
 
     const handleAnswer = () => {
         if (option === correctAnswer) {
-            alert('Good Job. Your Answer is Correct.');
+            toast.success('Your Answer is Correct.');
         }
         else {
-            alert('So Sad. You are wrong in this time.')
+            toast.error('You are wrong in this time.')
         }
     }
 
@@ -19,6 +20,7 @@ const Option = ({ option, correctAnswer }) => {
                 <input onClick={handleAnswer} type="radio" id={option} name="drone" value={option} />
                 <label htmlFor={option}>{option}</label>
             </div>
+
 
         </div>
     );
