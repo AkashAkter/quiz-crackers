@@ -3,22 +3,20 @@ import './Option.css'
 
 const Option = ({ option, correctAnswer }) => {
 
-    const clicked = () => {
-        // console.log(option);
+    const handleAnswer = () => {
         if (option === correctAnswer) {
-            alert('Correct');
+            alert('Good Job. Your Answer is Correct.');
         }
         else {
-            alert('Wrong')
+            alert('So Sad. You are wrong in this time.')
         }
     }
-
 
     return (
         <div className='option-button'>
 
             <div>
-                <input onClick={clicked} type="radio" id={option} name="drone" value={option} />
+                <input onClick={handleAnswer} type="radio" id={option} name="drone" value={option} />
                 <label htmlFor={option}>{option}</label>
             </div>
 

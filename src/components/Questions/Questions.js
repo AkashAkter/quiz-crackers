@@ -7,7 +7,7 @@ import './Questions.css';
 const Questions = ({ quiz }) => {
     const { question, correctAnswer } = quiz;
     const seeAnswer = () => {
-        alert("Correct Answer: " + correctAnswer);
+        alert("Correct Answer is : " + correctAnswer);
     }
 
 
